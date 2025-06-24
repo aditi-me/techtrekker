@@ -1,0 +1,377 @@
+body {
+  background-color: #f9fafb !important;
+  color: #374151;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-brand {
+  color: #a78bfa !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+}
+
+.nav-link {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+.nav-link:hover {
+  color: #a78bfa !important;
+}
+
+.btn-primary {
+  background-color: #a78bfa;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #7c5deb !important;
+}
+
+.btn-outline-primary {
+  color: #a78bfa !important;
+  border-color: #a78bfa !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #a78bfa !important;
+  color: white !important;
+}
+
+#hero {
+  background-color: #f4f2fd;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+#hero h1 {
+  color: #1e3a8a;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #374151;
+}
+
+.recognised {
+  width: 60%;
+  margin: 0 auto 100px auto;
+  background-color: #a78bfa;
+  padding: 20px 20px;
+  border-radius: 20px;
+}
+
+.stat-item {
+  margin: 15px;
+  color: white;
+  text-align: center;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  margin: 6px 0px 0px 0px;
+}
+
+.stat-item h2.count {
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.plus-sign {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.step-icon {
+  font-size: 3rem;
+  color: #a78bfa;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.step-icon:hover {
+  color: #1e3a8a;
+}
+
+.vertical-bar {
+  width: 2px;
+  height: 60px !important;
+  background-color: #1e3a8a;
+  margin: 0 15px;
+}
+
+.step-text h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #1e3a8a;
+}
+
+.step-text {
+  text-align: center !important;
+}
+
+.step-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #1e3a8a;
+  max-width: 150px;
+}
+
+.testimonial-slider {
+  position: relative;
+  overflow: visible;
+  height: 450px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-image {
+  background-image: url("images/bg1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.testimonial-swiper {
+  z-index: 3 !important;
+  width: 80%;
+  max-width: 800px;
+}
+
+.swiper-slide {
+  text-align: center;
+  z-index: 4 !important;
+}
+
+.name {
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.course {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.cta-section-wrapper {
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.cta-section-wrapper h2 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.cta-card {
+  width: 80%;
+  margin: 100px auto 20px auto;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.15);
+  background: #a78bfa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #1e3a8a;
+  padding: 14px 36px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(30, 58, 138, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-wave2 {
+  line-height: 0;
+  background-color: transparent;
+}
+
+.custom-wave2 svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -1px;
+}
+
+.custom-wave2 {
+  line-height: 0;
+  background-color: transparent;
+}
+
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.footer-link:hover {
+  color: white;
+  font-weight: 600;
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+.footer-icon {
+  color: white !important;
+  font-size: 1.4rem;
+  margin-right: 12px;
+  transition: color 0.3s;
+}
+
+.footer-icon:hover {
+  color: #60a5fa;
+}
+
+.footer input[type="email"] {
+  background-color: #f9fafb;
+  border: none;
+  color: #111827;
+}
+
+.footer .btn-light {
+  color: #1e3a8a;
+  background-color: #f1f5f9;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.footer .btn-light:hover {
+  background-color: #dbeafe;
+}
+
+.footer-divider {
+  border: 0;
+  height: 1.5px;
+  background-color: white;
+  margin: 1.5rem 0 1rem;
+  width: 100%;
+}
+
+/* Add this to your <style> block in header.php or your index.css */
+.student-sidebar-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px; /* Adjust spacing as needed */
+}
+
+.profile-pic-placeholder {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  background-color: #e9ecef; /* Light grey background */
+  border-radius: 50%; /* Makes it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures image fits within the circle if you add one */
+  margin-bottom: 15px;
+}
+
+/* If you later add an actual image */
+.profile-pic-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-sidebar .alert {
+  width: 90%; /* Make alert take more width */
+  margin: 0 auto; /* Center the alert */
+}
+
+.student-sidebar-profile .btn {
+  max-width: 250px; /* Limit button width for better appearance */
+}
+
+    .right-sidebar {
+        /* Ensure the sidebar itself is a flex container if you want its direct children to align */
+        display: flex; /* Make the sidebar a flex container */
+        flex-direction: column; /* Stack children vertically */
+        height: 100%; /* Ensure it takes full height to allow space-between to work */
+        justify-content: space-between; /* Distribute space between items */
+    }
+
+    .right-sidebar-content {
+        /* This container holds all your dynamic content.
+           We'll make it a flex container as well. */
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Allow it to grow and take available space */
+        justify-content: flex-start; /* Align content to the top by default */
+        padding-bottom: 20px; /* Add some padding at the bottom for spacing from logout */
+    }
+
+    .user-sidebar-profile {
+        /* This div wraps most of your logged-in user content except the logout button.
+           We want this entire block to stick to the top. */
+        display: flex; /* Make it a flex container */
+        flex-direction: column; /* Stack its children vertically */
+        align-items: center; /* Center items horizontally within this block (e.g., profile pic, name) */
+        margin-bottom: auto; /* Push this block to the top, creating space below it */
+    }
+
+    /* Target the logout button specifically to push it to the bottom */
+    .user-sidebar-profile .btn-danger.border-top {
+        margin-top: auto !important; /* Override any other margin and push it to the bottom */
+    }
+
+    /* ... other existing styles ... */

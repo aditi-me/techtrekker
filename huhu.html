@@ -1,0 +1,499 @@
+   body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+    }
+
+    .main-content-wrapper {
+        display: flex;
+        min-height: calc(100vh - 80px);
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .dashboard-left-sidebar,
+    .dashboard-middle-section,
+    .dashboard-right-section {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        /* Removed fixed flex-shrink: 0 from here so individual items can control it */
+        overflow-y: auto;
+    }
+
+    .dashboard-left-sidebar {
+        flex-basis: 350px; /* Increased from 300px */
+        max-width: 350px; /* Increased from 300px */
+        flex-shrink: 1; /* Allows this item to shrink if container is too small */
+        /* Removed: width: 300px; */
+    }
+
+    .dashboard-middle-section {
+        flex-grow: 1; /* Takes remaining space */
+        flex-shrink: 1; /* Allows this item to shrink */
+        min-width: 0; /* Allows content to shrink below its intrinsic width */
+        max-width: 830px; /* Adjusted max-width further */
+    }
+
+    .dashboard-right-section {
+        flex-basis: 300px; /* Slightly reduced from 350px to give middle more space */
+        max-width: 300px; /* Slightly reduced from 350px */
+        flex-shrink: 1; /* Allows this item to shrink if container is too small */
+        /* Removed: width: 350px; */
+    }
+
+    h1,
+    h5 {
+        color: #1a237e;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-card {
+        margin-bottom: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: #fdfdff;
+    }
+
+    /* FullCalendar Customizations for the MODAL ONLY */
+    #full-calendar-modal .modal-body {
+        min-height: 400px;
+    }
+
+    /* FullCalendar Specific Overrides */
+    /* Day of the week headers */
+    .fc .fc-col-header-cell-cushion {
+        /* Default styling for all day names in the header */
+        font-weight: bold;
+        text-decoration: none !important;
+        /* Remove underline */
+        padding: 8px 0;
+        /* Add some padding */
+    }
+
+    /* Specific colors for each day name in the header */
+    .fc-col-header-cell.fc-day-sun .fc-col-header-cell-cushion {
+        color: #E57373;
+        /* Sunday Red */
+    }
+
+    .fc-col-header-cell.fc-day-mon .fc-col-header-cell-cushion {
+        color: #FFD700;
+        /* Monday Yellow */
+    }
+
+    .fc-col-header-cell.fc-day-tue .fc-col-header-cell-cushion {
+        color: #64B5F6;
+        /* Tuesday Blue */
+    }
+
+    .fc-col-header-cell.fc-day-wed .fc-col-header-cell-cushion {
+        color: #81C784;
+        /* Wednesday Green */
+    }
+
+    .fc-col-header-cell.fc-day-thu .fc-col-header-cell-cushion {
+        color: #FFB74D;
+        /* Thursday Orange */
+    }
+
+    .fc-col-header-cell.fc-day-fri .fc-col-header-cell-cushion {
+        color: #BA68C8;
+        /* Friday Purple */
+    }
+
+    .fc-col-header-cell.fc-day-sat .fc-col-header-cell-cushion {
+        color: #4DD0E1;
+        /* Saturday Cyan/Teal */
+    }
+
+
+    /* Date cells - reset any previous background/text color from general styling */
+    .fc .fc-daygrid-day-number {
+        color: #333;
+        /* Default text color for all dates */
+        font-weight: normal;
+        text-decoration: none !important;
+        /* Remove underline */
+        padding: 5px;
+        /* Add some padding */
+        background-color: transparent !important;
+        /* Ensure no background color for dates by default */
+        border: none !important;
+        /* Ensure no border for dates by default */
+        border-radius: 0 !important;
+        /* Ensure no border-radius for dates by default */
+    }
+
+    /* Current date styling - apply only to the date number */
+    .fc .fc-day-today .fc-daygrid-day-number {
+        background-color: #e3f2fd;
+        /* Light blue background for today's number */
+        color: #1a237e;
+        /* Darker blue for today's date number */
+        font-weight: bold;
+        padding: 5px 8px;
+        /* Slightly more padding for the highlighted number */
+        border-radius: 4px;
+        /* Rounded corners for the highlighted number */
+        display: inline-block;
+        /* Make it an inline block to apply padding/background/border-radius effectively */
+    }
+
+    /* Remove default FullCalendar blue borders/highlights and underlines */
+    .fc .fc-button-primary {
+        background-color: #6c757d;
+        /* Use a secondary gray for buttons */
+        border-color: #6c757d;
+        color: #fff;
+        text-decoration: none !important;
+    }
+
+    .fc .fc-button-primary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+
+    .fc .fc-button-primary:focus {
+        box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
+        /* Custom focus for gray buttons */
+    }
+
+    .fc .fc-button-primary:active {
+        background-color: #545b62;
+        border-color: #4e555b;
+    }
+
+    .fc-event {
+        /* Remove underline from events if any are added later */
+        text-decoration: none !important;
+    }
+
+    /* Ensure no blue underline on links within FullCalendar if applicable */
+    .fc a {
+        text-decoration: none !important;
+    }
+
+    /* To-do list styling */
+    .todo-list-card h5 {
+        cursor: pointer;
+        color: #4a148c;
+    }
+
+    /* --- Custom Weekly Calendar Styling (remains unchanged as per previous request) --- */
+    #custom-weekly-calendar {
+        cursor: pointer;
+        /* Indicate it's clickable */
+        margin-bottom: 20px;
+        padding: 0;
+        /* Remove padding as it's now inside #weeklyCalendarDisplay for consistent border */
+        border-radius: 8px;
+        /* Keep outer border radius */
+        overflow: hidden;
+        /* Ensures border-radius clips content */
+    }
+
+    #custom-weekly-calendar .calendar-nav {
+        margin-bottom: 10px;
+        /* Smaller margin */
+        padding: 10px 15px 0 15px;
+        /* Add some padding to navigation, consistent with card padding */
+    }
+
+    #weeklyCalendarDisplay {
+        border: 1px solid #e0e0e0;
+        /* Main border covering both rows */
+        border-radius: 8px;
+        /* Apply border radius here as well */
+        overflow: hidden;
+        /* Important for border-radius to work with inner elements */
+        margin: 0 15px 15px 15px;
+        /* Margin to align with navigation buttons */
+    }
+
+    .calendar-header-row,
+    .calendar-date-row {
+        display: flex;
+        /* Use flexbox for horizontal arrangement */
+        justify-content: space-around;
+        /* Distribute items evenly */
+        align-items: stretch;
+        /* Stretch items to fill height */
+        width: 100%;
+        /* Take full width */
+    }
+
+    .calendar-header-row div,
+    .calendar-date-row div {
+        flex: 1;
+        /* Each item takes equal space */
+        text-align: center;
+        /* Center the text */
+        padding: 5px 0;
+        /* Add vertical padding */
+        /* Add right border to create vertical separators */
+        border-right: 1px solid #eee;
+        /* Default border color */
+    }
+
+    /* Remove right border from the last item in each row */
+    .calendar-header-row div:last-child,
+    .calendar-date-row div:last-child {
+        border-right: none;
+    }
+
+    .calendar-header-row {
+        font-weight: bold;
+        color: #333;
+        font-size: 0.75em;
+        /* Reduced font size for day names */
+        border-bottom: 1px solid #e0e0e0;
+        /* Separator line between day and date rows */
+        background-color: #f8f8f8;
+        /* Slightly different background for header row */
+    }
+
+    .calendar-date-row {
+        font-size: 0.8em;
+        /* Slightly reduced font size for dates */
+        color: #666;
+        background-color: #fff;
+        /* White background for date row */
+    }
+
+    /* ... your existing styles ... */
+
+    /* FullCalendar Customizations for the MODAL ONLY */
+    #full-calendar-modal .modal-body {
+        height: 400px;
+        /* Keep your minimum height */
+        /* Add these properties to make the modal body a flex container
+            and allow it to define a flexible height for its children */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        /* Hide any overflow from children that might escape, though the main fix is on #full-calendar */
+    }
+
+    #full-calendar {
+        /*
+        This is the crucial part for controlling the FullCalendar's height
+        and preventing overflow within the modal body.
+        */
+        flex-grow: 1;
+        /* Allows #full-calendar to grow and shrink within the flex container (.modal-body) */
+        overflow-y: auto;
+        /* Adds a vertical scrollbar to #full-calendar if its content overflows */
+        height: 100%;
+        /* Important: Makes #full-calendar take up 100% of the available flex space */
+        height: 350px;
+        /* Optional: A minimum height for the calendar itself */
+        box-sizing: border-box;
+        /* Ensures padding/border don't add to the total height */
+    }
+
+    #full-calendar-modal .fc .fc-toolbar-title {
+        flex-grow: 1;
+        /* Allow the title to take available space */
+        text-align: center;
+        /* Center the text */
+        margin: 0;
+        /* Remove default margins if any */
+    }
+
+    /* Adjust button group margin if needed */
+    #full-calendar-modal .fc .fc-toolbar-chunk:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        /* Center the prev,next today buttons */
+        flex-grow: 1;
+        /* Allow to take space */
+    }
+
+    #full-calendar-modal .fc .fc-toolbar-chunk:nth-child(3) {
+        flex-grow: 1;
+        /* Allow the right chunk to take space for centering effect */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .main-content-wrapper {
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .dashboard-left-sidebar,
+        .dashboard-middle-section,
+        .dashboard-right-section {
+            width: 100%; /* Ensures they take full width when stacked */
+            max-width: none; /* Remove max-width constraint when stacked */
+            flex-basis: auto; /* Remove flex-basis constraint when stacked */
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Additional responsiveness for small calendar for very narrow screens */
+    @media (max-width: 400px) {
+
+        .calendar-header-row div,
+        .calendar-date-row div {
+            font-size: 0.65em;
+            /* Even smaller font for very narrow screens */
+            padding: 3px 0;
+        }
+    }
+
+    .todo-list-card {
+        /* Add some padding or styling for the card */
+        padding: 20px;
+    }
+
+    .todo-heading {
+        cursor: default;
+        /* Remove pointer cursor as it's no longer toggling */
+    }
+
+    #todo-add-form-container {
+        margin-top: 15px;
+        /* Space between existing tasks and the add form */
+    }
+
+    .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid rgba(0, 0, 0, .125);
+        margin-bottom: -1px;
+        /* To make borders collapse nicely */
+    }
+
+    .list-group-item:first-child {
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+    }
+
+    .list-group-item:last-child {
+        margin-bottom: 0;
+        border-bottom-right-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+
+    .form-check {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        /* Allow the checkbox and label to take available space */
+    }
+
+    .form-check-input {
+        margin-right: 0.75rem;
+        /* Space between checkbox and text */
+        cursor: pointer;
+    }
+
+    .task-text {
+        flex-grow: 1;
+        word-break: break-word;
+        /* Ensure long task descriptions wrap */
+    }
+
+    .task-actions .reorder-handle {
+        cursor: grab;
+        margin-left: 1rem;
+        /* Space between text and handle */
+        color: #ccc;
+        /* Lighter color for grip icon */
+    }
+
+    /* Style for completed tasks */
+    .list-group-item.done .task-text {
+        text-decoration: line-through;
+        color: #6c757d !important;
+        /* Bootstrap's text-muted color */
+    }
+
+    .list-group-item.done {
+        background-color: #f8f9fa;
+        /* Light grey background for done tasks */
+        color: #6c757d;
+        /* Overall muted color for done task item */
+    }
+
+    /* Hide the "No tasks" message if the list is not empty */
+    /* Add this to your <style> block or CSS file */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+}
+
+.reorder-handle,
+.delete-task {
+    cursor: grab; /* Indicate draggable */
+    margin-left: 10px; /* Space between checkbox and icons */
+    color: #6c757d; /* Muted color for icons */
+}
+
+.delete-task {
+    cursor: pointer;
+    color: #dc3545; /* Red color for delete icon */
+}
+
+.reorder-handle:active {
+    cursor: grabbing;
+}
+
+.list-group-item.done .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.no-tasks-message {
+    text-align: center;
+    padding: 15px;
+    color: #6c757d;
+}
+
+/* Styles for new purchase notification cards */
+.new-purchase-notification-card {
+    border-left: 5px solid #28a745; /* Green border for success */
+    background-color: #e6ffed; /* Light green background */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.new-purchase-notification-card h6 {
+    color: #28a745; /* Darker green heading */
+    margin-bottom: 10px;
+}
+.new-purchase-notification-card p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+/* Styles for Admin Notices */
+.admin-notice-card {
+    border-left: 5px solid #007bff; /* Blue border for admin notices */
+    background-color: #e7f3ff; /* Light blue background */
+    padding: 15px;
+    margin-bottom: 10px; /* Slightly less margin for denser list */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.admin-notice-card h6 {
+    color: #007bff; /* Darker blue heading */
+    margin-bottom: 10px;
+}
+.admin-notice-card p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
